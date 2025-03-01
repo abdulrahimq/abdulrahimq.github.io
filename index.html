@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <title>Abdelrahim "Abed" Qaddoumi</title>
@@ -10,133 +10,224 @@
             margin: 0;
             background-color: #FFF2A3;
         }
+
         h1 {
             color: #003366;
+            margin: 0;
             padding: 20px;
             background-color: #FFF2A3;
-            margin: 0;
         }
+
         a {
             color: #0066CC;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .nav {
             padding: 10px 20px;
             background-color: #FFF2A3;
+            display: flex;
+            gap: 3px;
         }
+
         .footer {
             font-size: small;
             margin-top: 30px;
             border-top: 1px solid #999999;
             padding: 10px 20px;
         }
-        #translate-btn {
-            float: right;
-            margin: 20px;
-            padding: 5px 10px;
-            border: 1px solid #0066CC;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+
         .section:nth-child(odd) {
             background-color: #FFFFCC;
             padding: 15px 20px;
         }
+
         .section:nth-child(even) {
             background-color: #FFF2A3;
             padding: 15px 20px;
         }
+
         hr {
             border: none;
             border-top: 1px solid #999999;
             margin: 0;
         }
+
     </style>
     <script>
-        function translatePage() {
-            document.documentElement.dir = document.documentElement.dir === 'rtl' ? 'ltr' : 'rtl';
-            var isArabic = document.documentElement.lang === 'ar';
-            document.documentElement.lang = isArabic ? 'en' : 'ar';
-
-            document.getElementById('translate-btn').textContent = isArabic ? 'بالعربي' : 'English';
-            document.querySelector('h1').textContent = isArabic ? 'Abed - Computational Linguist' : 'عبدالرحيم قدومي';
-
-            document.getElementById('about').textContent = isArabic ? 'About Me' : 'نبذة عني';
-            document.getElementById('research').textContent = isArabic ? 'Research' : 'الأبحاث';
-        }
-
-        function playPronunciation() {
-            var audio = new Audio('https://example.com/abed_pronunciation.mp3');
-            audio.play();
-        }
     </script>
 </head>
 <body>
-    <button id="translate-btn" onclick="translatePage()">بالعربي</button> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Jordan.svg" alt="Jordanian Flag" width="30" style="vertical-align: middle; margin-right: 10px; float:right;">
 
-    <h1>Abed - Computational Linguist <small>(/ʕaːbɪd/)</small> <button onclick="playPronunciation()">🔊</button></h1>
+<h1>
+    <span>Abdelrahim "Abed" Qaddoumi <small>AR: [ʕaːbɪd] | EN: [ʔabɪd]</small></span>
+</h1>
 
-    <div class="nav">
-        [ <a href="#about">About</a> |
-          <a href="#research">Research</a> |
-          <a href="#teaching">Teaching</a> |
-          <a href="#education">Education</a> |
-          <a href="#experience">Experience</a> ]
-    </div>
+<div class="nav">
+    [ <a href="#about"><span>About</span></a> |
+    <a href="#research"><span>Research</span></a> |
+    <a href="#education"><span>Education</span></a> |
+    <a href="#experience"><span>Experience</span></a> ]
+</div>
 
-    <hr>
+<hr>
 
-    <div class="section">
-        <img src="your_picture_here.jpg" alt="Abed's Photo" width="150" style="float:right; margin-left:15px;">
-        <h2 id="about">About Me</h2>
-        <p>
-            I started my PhD in Linguistics at Stony Brook in 2024<br>
-            Advisor: Owen Rambow<br>
-            Email: abdelrahim.qadoumi<at> stonybrook <dot> edu<br>
-            Office: Ward Melville Social and Behavioral Sciences Building (SBS), N222<br>
-        </p>
-        <p>
-            I focus on computational linguistics. My research combines formal language theory, phonology, and machine learning to understand the capabilities and limitations of language models, especially transformers.
-        </p>
-        <p>
-            Previously, I've worked on projects related to Arabic dialect phonology, finite-state automata, and morphophonemics. I'm also interested in historical Arabic linguistics and the linguistic heritage of Arab diaspora communities in NYC.
-        </p>
+<div class="section">
+    <h2 id="about">
+        <span>About Me</span>
+    </h2>
+    <p>
+        I started my PhD in Linguistics at Stony Brook in 2024<br>
+        Advisor: Owen Rambow<br>
+        Email: abdelrahim.qadoumi@stonybrook.edu<br>
+        Office: Ward Melville Social and Behavioral Sciences Building (SBS), N222<br>
+    </p>
 
-        <p>
-            [<a href="https://twitter.com/" target="_blank">Twitter</a>]
-            [<a href="https://scholar.google.com/" target="_blank">Google Scholar</a>]
-            [<a href="https://linkedin.com/" target="_blank">LinkedIn</a>]
-            [<a href="https://github.com/" target="_blank">GitHub</a>]
-        </p>
-    </div>
+    <p>
+        I focus on computational linguistics. My research combines formal language theory, phonology, and natural language
+        processing NLP to understand language.
+    </p>
 
-    <div class="section">
-        <h2 id="research">Research</h2>
-        <h3>Interests</h3>
-        <ul>
-            <li>Formal Methods in NLP</li>
-            <li>Transformer Model Complexity</li>
-            <li>Arabic Phonology and Morphophonemics</li>
-            <li>Finite-State Automata & Transducers</li>
-            <li>Dialectology and Computational Dialect Classification</li>
-        </ul>
+    <p>
+        Previously, I've worked on projects related to Arabic dialect phonology, finite-state automata, and
+        morphology.
+    </p>
 
-        <h3>Selected Publications</h3>
-        <ul>
-            <li><b>Abed et al.</b> (2024). "Pharyngealization Spread in Cairene Arabic: A Computational Approach". <i>Proceedings of SYNC'24</i>.</li>
-            <li><b>Abed.</b> (2023). "Expressivity of Transformers in Formal Language Recognition". <i>Journal of Computational Linguistics</i>, 49(3).</li>
-            <li><b>Abed and Colleagues.</b> (2022). "Morphophonemic Variation in Jordanian and Egyptian Arabic". <i>ACL Workshop on Arabic NLP</i>.</li>
-        </ul>
-    </div>
+    <p>
+        [<a href="https://x.com/qaddoumi_a" target="_blank">Twitter</a>]
+        [<a href="https://scholar.google.com/citations?user=MFbmBaoAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>]
+        [<a href="https://www.linkedin.com/in/abdulrahim-qaddoumi-28719aa0/" target="_blank">LinkedIn</a>]
+        [<a href="https://github.com/abdulrahimq" target="_blank">GitHub</a>]
+        [<a href="" target="_blank">CV</a>]
+    </p>
+</div>
 
-    <hr>
+<div class="section">
+    <h2 id="research">
+        <span>Research</span>
+    </h2>
 
-    <div class="footer">
-        Last updated: February 28, 2025
-    </div>
+    <h3>Interests</h3>
+    <ul>
+        <li>Formal Methods in NLP</li>
+        <li>Transformer Model Complexity</li>
+        <li>Arabic Phonology and Morphophonemics</li>
+        <li>Finite-State Automata &amp; Transducers</li>
+    </ul>
+
+    <h3>Selected Publications</h3>
+    <ul>
+        <li><b>S Khalifa, A Qaddoumi, E Broselow, O Rambow.</b> (2024). "Picking Up Where the Linguist Left Off: Mapping
+            Morphology to Phonology through Learning the Residuals". <i>Proceedings of The Second Arabic Natural
+                Language Processing Conference</i>, 258-264.
+        </li>
+        <li><b>A Qaddoumi.</b> (2024). "KSAA-RD Shared Task: Enhancing Arabic Word Embedding with Modified BERT
+            Multilingual". <i>ArabicNLP 2023</i>.
+        </li>
+        <li><b>N Kim, J Khilnani, A Warstadt, A Qaddoumi.</b> (2023). "Reconstruction Probing". <i>arXiv preprint
+            arXiv:2212.10792</i>.
+        </li>
+        <li><b>MS Rick D Russotto, Maria Caffrey, Margaret Powell, Chiara Lepore, Elia</b> (2022). "Global Calculations
+            of Tropical Cyclone Return Periods and an ACE-like Risk Metric". <i>American Geophysical Union</i>.
+        </li>
+        <li><b>B Alhafni, N Habash, H Bouamor, O Obeid, S Alrowili, D Alzeer</b> (2022). "The Shared Task on Gender
+            Rewriting". <i>arXiv preprint arXiv:2210.12410</i>.
+        </li>
+        <li><b>A Qaddoumi.</b> (2022). "Arabic Sentiment Analysis by Pretrained Ensemble". <i>Empirical Methods in
+            Natural Language Processing - The Seventh Arabic</i>.
+        </li>
+        <li><b>S Gotah, G Guy, L MacKenzie, A Qaddoumi, B Saridede.</b> (2022). "A New Look at A-prefixing in
+            Appalachian English". <i>American Dialect Society</i>.
+        </li>
+        <li><b>A Qaddoumi, SW Han.</b> (2021). "ClinicalKnockoffs: Identification of significant features for Hospital
+            Readmission".
+        </li>
+    </ul>
+</div>
+
+<hr>
+
+<div class="section">
+    <h2 id="education">
+        <span>Education</span>
+    </h2>
+    <ul>
+        <li><b>Stony Brook University</b>, Stony Brook, NY<br>
+            Ph.D. in Computational Linguistics (Present)
+        </li>
+        <li><b>New York University</b>, New York, NY<br>
+            M.S. in Computer Science (Sep 2021)
+        </li>
+        <li><b>Queen Mary University of London</b>, London, UK<br>
+            M.S. in Computing and Information Systems (Sep 2016)
+        </li>
+        <li><b>University of Jordan</b>, Amman, Jordan<br>
+            B.S. in Electrical Engineering (Dec 2012)
+        </li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2 id="experience">
+        <span>Experience</span>
+    </h2>
+    <h3>Machine Learning Engineer II: Gro Intelligence, Brooklyn, NY (Sep 2021 - Sep 2024)</h3>
+    <ul>
+        <li>Developed robust and scalable backend systems for AI model training and serving, designing an NLP pipeline
+            to analyze agricultural data
+        </li>
+        <li>Led migration of legacy models to microservices architecture using Docker and AWS Batch</li>
+        <li>Architected and implemented test code, updating Airflow scheduling and decreasing product errors by 84%</li>
+        <li>Refactored legacy code into microservices (Terraform, Airflow, Docker, EC2), reducing costs by 91%</li>
+        <li>Developed models to simulate hurricane risks, global land surface temperature, and tomato yields in the
+            USA
+        </li>
+    </ul>
+
+    <h3>Software Engineer I: New York University, Brooklyn, NY (May 2021 - Sep 2021)</h3>
+    <ul>
+        <li>Built a front-end UI to search databases using ReactJS and Postgres for over 10,000 users</li>
+        <li>Developed a feature allowing users to add linguistic data to the website's database, optimizing SQL
+            queries
+        </li>
+    </ul>
+
+    <h3>Research Assistant: New York University, Brooklyn, NY (Sep 2020 - May 2021)</h3>
+    <ul>
+        <li>Developed a Python script to collect YouTube videos, extract audio, and transcribe text for a speech
+            dataset
+        </li>
+        <li>Coded and tested multiple neural network variants (LSTM, GRU) to add diacritics to Arabic text</li>
+        <li>Conducted neurolinguistics research on human cognitive morphology processes compared to language models</li>
+        <li>Leveraged NYU GPU cluster for training/testing, using Docker and Slurm to enhance computational efficiency
+        </li>
+    </ul>
+
+    <h3>Software Engineering Intern: Synaps Network, Remote (Jun 2020 - Sep 2020)</h3>
+    <ul>
+        <li>Developed a new command-line interface text comparison app using Python, NLTK, and SpaCy</li>
+        <li>Created a script to collect YouTube metadata related to Syria and cleaned the data for video
+            categorization
+        </li>
+    </ul>
+
+    <h3>Tech Product Manager: App House, London, UK (Jan 2017 - Dec 2019)</h3>
+    <ul>
+        <li>Built and maintained 12 iOS apps (Swift/Xcode) with over 1 million monthly users</li>
+        <li>Interviewed and hired senior-level software engineers within a $250,000 budget over 6 months</li>
+        <li>Managed a multi-skilled team, creating product/design documentation, Jira tickets, and project timelines
+        </li>
+        <li>Communicated with cross-functional teams to align technical and business objectives for project success</li>
+    </ul>
+</div>
+
+<div class="footer">
+    Last updated: February 28, 2025
+</div>
 
 </body>
 </html>
