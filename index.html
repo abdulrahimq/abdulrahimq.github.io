@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Abdelrahim "Abed" Qaddoumi</title>
+    <style>
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            color: #333333;
+            margin: 0;
+            background-color: #FFF2A3;
+        }
+        h1 {
+            color: #003366;
+            padding: 20px;
+            background-color: #FFF2A3;
+            margin: 0;
+        }
+        a {
+            color: #0066CC;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .nav {
+            padding: 10px 20px;
+            background-color: #FFF2A3;
+        }
+        .footer {
+            font-size: small;
+            margin-top: 30px;
+            border-top: 1px solid #999999;
+            padding: 10px 20px;
+        }
+        #translate-btn {
+            float: right;
+            margin: 20px;
+            padding: 5px 10px;
+            border: 1px solid #0066CC;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .section:nth-child(odd) {
+            background-color: #FFFFCC;
+            padding: 15px 20px;
+        }
+        .section:nth-child(even) {
+            background-color: #FFF2A3;
+            padding: 15px 20px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #999999;
+            margin: 0;
+        }
+    </style>
+    <script>
+        function translatePage() {
+            document.documentElement.dir = document.documentElement.dir === 'rtl' ? 'ltr' : 'rtl';
+            var isArabic = document.documentElement.lang === 'ar';
+            document.documentElement.lang = isArabic ? 'en' : 'ar';
+
+            document.getElementById('translate-btn').textContent = isArabic ? 'بالعربي' : 'English';
+            document.querySelector('h1').textContent = isArabic ? 'Abed - Computational Linguist' : 'عبدالرحيم قدومي';
+
+            document.getElementById('about').textContent = isArabic ? 'About Me' : 'نبذة عني';
+            document.getElementById('research').textContent = isArabic ? 'Research' : 'الأبحاث';
+        }
+
+        function playPronunciation() {
+            var audio = new Audio('https://example.com/abed_pronunciation.mp3');
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+    <button id="translate-btn" onclick="translatePage()">بالعربي</button> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Jordan.svg" alt="Jordanian Flag" width="30" style="vertical-align: middle; margin-right: 10px; float:right;">
+
+    <h1>Abed - Computational Linguist <small>(/ʕaːbɪd/)</small> <button onclick="playPronunciation()">🔊</button></h1>
+
+    <div class="nav">
+        [ <a href="#about">About</a> |
+          <a href="#research">Research</a> |
+          <a href="#teaching">Teaching</a> |
+          <a href="#education">Education</a> |
+          <a href="#experience">Experience</a> ]
+    </div>
+
+    <hr>
+
+    <div class="section">
+        <img src="your_picture_here.jpg" alt="Abed's Photo" width="150" style="float:right; margin-left:15px;">
+        <h2 id="about">About Me</h2>
+        <p>
+            I started my PhD in Linguistics at Stony Brook in 2024<br>
+            Advisor: Owen Rambow<br>
+            Email: abdelrahim.qadoumi<at> stonybrook <dot> edu<br>
+            Office: Ward Melville Social and Behavioral Sciences Building (SBS), N222<br>
+        </p>
+        <p>
+            I focus on computational linguistics. My research combines formal language theory, phonology, and machine learning to understand the capabilities and limitations of language models, especially transformers.
+        </p>
+        <p>
+            Previously, I've worked on projects related to Arabic dialect phonology, finite-state automata, and morphophonemics. I'm also interested in historical Arabic linguistics and the linguistic heritage of Arab diaspora communities in NYC.
+        </p>
+
+        <p>
+            [<a href="https://twitter.com/" target="_blank">Twitter</a>]
+            [<a href="https://scholar.google.com/" target="_blank">Google Scholar</a>]
+            [<a href="https://linkedin.com/" target="_blank">LinkedIn</a>]
+            [<a href="https://github.com/" target="_blank">GitHub</a>]
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 id="research">Research</h2>
+        <h3>Interests</h3>
+        <ul>
+            <li>Formal Methods in NLP</li>
+            <li>Transformer Model Complexity</li>
+            <li>Arabic Phonology and Morphophonemics</li>
+            <li>Finite-State Automata & Transducers</li>
+            <li>Dialectology and Computational Dialect Classification</li>
+        </ul>
+
+        <h3>Selected Publications</h3>
+        <ul>
+            <li><b>Abed et al.</b> (2024). "Pharyngealization Spread in Cairene Arabic: A Computational Approach". <i>Proceedings of SYNC'24</i>.</li>
+            <li><b>Abed.</b> (2023). "Expressivity of Transformers in Formal Language Recognition". <i>Journal of Computational Linguistics</i>, 49(3).</li>
+            <li><b>Abed and Colleagues.</b> (2022). "Morphophonemic Variation in Jordanian and Egyptian Arabic". <i>ACL Workshop on Arabic NLP</i>.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        Last updated: February 28, 2025
+    </div>
+
+</body>
+</html>
